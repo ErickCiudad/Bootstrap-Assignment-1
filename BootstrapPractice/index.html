@@ -145,10 +145,89 @@
 
 
 
-              <a
+              <!-- <a
                   data-toggle="tooltip" title="Or Call us at +852 12345678"
                    data-placement="bottom" href="#reserveForm"><button type="button" class="btn btn-warning">Reserve a Table</button></a>
+                   This would make a little pop up appear below the button that gives info
+                  -->
+<a data-toggle="modal" data-target="#reserveModal"
+                  data-placement="bottom"><button type="button" class="btn btn-warning">Reserve a Table</button></a>
 
+                  <div id="reserveModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times
+                             ;</button>
+                          <h4 class="modal-title">Login </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group" >
+                           <!-- A float can be bad in situations like these!! -->
+                           <div>
+                           <h1 style="color:black">Reserve a table</h1>
+                           </div>
+
+                           <div id="reserveForm" class="media">
+                           <div  style="padding: 20px;">
+                            <form class="form-inline">
+                              <div class="form-group" style="padding-bottom:10px; color:black">
+                                <label for="exampleInputName2">Number of Guests
+                                <input type="radio" class="form-control" id="exampleInputName2" name="people"> 1
+                                </label>
+                                <label class = "radios">
+                                <input type="radio" class="form-control" id="exampleInputName2" name="people"> 2
+                              </label>
+                              <label class = "radios">
+                              <input type="radio" class="form-control" id="exampleInputName2" name="people"> 3
+                            </label>
+                            <label class = "radios">
+                            <input type="radio" class="form-control" id="exampleInputName2" name="people"> 4
+                           </label>
+                           <label class = "radios">
+                           <input type="radio" class="form-control" id="exampleInputName2" name="people"> 5
+                           </label>
+                           <label class = "radios">
+                           <input type="radio" class="form-control" id="exampleInputName2" name="people"> 6
+                           </label>
+                              </div>
+                              <br>
+                              <div class="form-group" style ="color:black">
+                                <label for="exampleInputName2">Date and Time</label>
+                                <input type="date" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail2"></label>
+                                <input type="time" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                              </div>
+                              <!-- Smoking STUFF -->
+                              <div class="btn-group" data-toggle="buttons" style="padding: 2%">
+                                <label class="btn btn-primary active btn-success">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-primary btn-danger">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+
+                              </div>
+                              <!--  -->
+                             <br><br>
+                              <div class="alert alert-warning">
+                                 <strong>Warning!</strong> Please <a href="#call"> call</a> in advance of reservations of more than six people.
+                               </div>
+                              <br>
+                              <button type="submit" class="btn btn-primary">Reserve</button>
+                              <button type="button" class="btn btn-default btn-sm"
+                                                    data-dismiss="modal">Cancel</button>
+                            </form>
+                           </div>
+                           <!--  -->
+
+
+                  </div>
+                  </div>
+                  </div>
 
             </div>
         </div>
@@ -184,7 +263,7 @@
                        </div>
                    </div>
                    <div class="item">
-                         <a href="#">
+                          <a href="#">
                          <img class="media-object img-thumbnail"
                           src="img/buffet.png" alt="Uthappizza">
                          </a>
